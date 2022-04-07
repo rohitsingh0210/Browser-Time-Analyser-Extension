@@ -15,7 +15,8 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  padding: 5px;
+  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +36,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.bruh-button{
+  width: 450px;
+  height: 45px;
+  background-color: #00bda7;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  text-align: center;
+  color: #f8f8f8;
+  border: 0px;
+  cursor: pointer;
+}
+
+footer{
+  padding: 10px;
+  background-color: #282c34;
+  position: relative;
+  bottom: 0;
+  /* opacity: 0.6; */
+}
+
+.AllSites{
+  overflow-y: auto;
+  /* max-height: 200px; */
 }

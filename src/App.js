@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import Graph from './Components/Graph';
+import AllSites from './Components/AllSites';
 
 function App() {
+  const [showGraph, setShowGraph] = useState(true);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Browsing Time Analyser
       </header>
+      <div id='graph'>
+         { showGraph ? <Graph /> : <AllSites />}
+      </div>
+      <footer>
+        <button className='bruh-button' onClick={() => setShowGraph((prevState)=>(!prevState))}>{showGraph?"Manage Sites":"Back"}</button>
+      </footer>
+
     </div>
   );
 }
